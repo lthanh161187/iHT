@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iCSboDy — Learning Summary</title>
+<title>iHT — Learning Summary</title>
 <style>
 :root{
   --green:#177022; --yellow:#FFCA36; --ink:#171717; --muted:#697069;
@@ -30,7 +30,7 @@ grid-template-columns:180px 1fr;gap:32px;margin-bottom:46px}.number{font-size:13
 .lead{font-size:18px;color:#424842;max-width:780px;margin:20px 0 0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.item{background:var(--white);
 border:1px solid var(--line);padding:28px}.card{min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
-.card-num{font-size:12px;color:var(--green);font-weight:850;letter-spacing:.1em}
+.card-num{font-size:30px;color:var(--green);font-weight:850;letter-spacing:.1em}
 .card h3{font-size:27px;line-height:1.05;letter-spacing:-.025em;margin:55px 0 12px}.card p{color:#5c625d;margin:0}
 .quote{background:var(--green);color:white;padding:56px clamp(28px,6vw,80px);position:relative;overflow:hidden}
 .quote:after{content:"“";position:absolute;right:24px;top:-50px;font-size:220px;line-height:1;color:rgba(255,255,255,.08)}
@@ -102,7 +102,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);f
 </head>
 <body>
 <header><div class="wrap nav">
-  <div class="brand">iCSboDy</div><div class="meta" id="navMeta"></div>
+  <div class="brand">iHT5day</div><div class="meta" id="navMeta"></div>
 </div></header>
 
 <main><div class="wrap" id="app"></div></main>
@@ -119,17 +119,17 @@ const lessons = [
 /* ======================= BUỔI 01 ======================= */
 {
   id: 1,
-  cohort: "HỆ TRỤC · K13",
-  date: "Buổi 01 · 11 buổi học",
-  title: "Cơ thể bắt đầu từ đâu?",
-  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học — không phải để học lại từ đầu, mà để nhớ điều cơ thể đã từng nhận ra.",
+  cohort: "Thực nghiệm nơi cơ thể",
+  date: "Buổi 01/05",
+  title: "từ TẬP đến DÙNG",
+  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học - không phải để học lại từ đầu, mà để nhớ điều cơ thể đã nhận ra.",
 
   today: {
-    title: "Những bài học trong buổi học",
-    intro: "Phần này được trình bày như một chuỗi slide. Mỗi slide giữ lại một chủ đề, cách giải thích và ví dụ thực tế để học viên có thể đọc lại sau buổi học.",
+    title: "Điều buổi học đã chạm",
+    intro: "Huấn luyện cơ thể là một quá trình liên tục trong mọi hoạt động, không phải chỉ trong giờ tập.",
     slides: [
       {
-        label: "CHỦ ĐỀ 02",
+        label: "01",
         title: 'Khái niệm "Tập = Dùng"',
         paragraphs: [
           'MỸ NHƯ giới thiệu một khái niệm cốt lõi: việc "tập" không chỉ diễn ra khi chúng ta vào phòng gym, lớp yoga hay phòng zoom. Thực tế, chúng ta đang "dùng" cơ thể 24/7 - khi ngủ, khi ngồi, khi đi, khi làm việc. Mỗi hành động sử dụng cơ thể đều là một hình thức "tập".',
@@ -139,13 +139,24 @@ const lessons = [
         ]
       },
       {
-        label: "CHỦ ĐỀ 04",
+        label: "02",
         title: 'Vấn đề của việc "Học hoài" mà không Dùng',
         paragraphs: [
           'Một cuộc trao đổi thú vị diễn ra giữa MỸ NHƯ và TRần Thi Tơ (ngoại) về việc liên tục đi học nhưng không áp dụng. TRần Thi Tơ chia sẻ rằng bà biết nhiều, học nhiều trong nhiều năm, nhưng vẫn muốn học thêm những gì có lợi cho cơ thể.',
           'MỸ NHƯ chỉ ra rằng đây chính là vấn đề: biết nhiều nhưng không dùng. Bà so sánh nó như một cái nhớ dù - khi cần, não bộ sẽ tự động móc ra những gì đã học. Nhưng vấn đề là khi tín hiệu từ cơ thể phát ra, não bộ lại móc ra quá nhiều thứ không cần thiết, giống như khi chỉ cần một con dao để cắt nhưng lại lấy ra cả bộ dao kéo.',
           'Điều này dẫn đến việc chúng ta liên tục đi tìm kiếm phương pháp mới, lớp học mới, thầy cô mới, mà không bao giờ dừng lại để thực sự dùng những gì đã học. MỸ NHƯ nhấn mạnh rằng nếu cứ nói "em vào đây để học những cái gì đúng", thì sẽ mãi mãi trong vòng lặp tìm kiếm cái "đúng" mà không bao giờ thực sự thay đổi.',
           'Thay vào đó, phòng học này hướng đến việc giúp học viên tự nhận diện những gì đang sai trong cách sử dụng cơ thể của chính mình, từ đó tự điều chỉnh. Không có "đúng" hay "sai" tuyệt đối, chỉ có việc phù hợp hay không phù hợp với cơ thể của từng người.'
+        ]
+      }
+      {
+        label: "03",
+        title: 'Thực hành Quan sát Cơ thể',
+        paragraphs: [
+          'Phần thực hành bắt đầu với tư thế đứng cơ bản: hai gót chân chạm nhau, bàn chân tách rộng ra đến khi cảm giác sắp ngã ra sau. Hai tay thả lỏng, không làm gì với tay. Sau đó, học viên được yêu cầu kẹp đùi lại, kéo phần gần gối lại gần nhau.',
+          'Trong tư thế này, MỸ NHƯ yêu cầu học viên quan sát: chân nào yếu, chân nào mạnh? Lực đang nhấn vào đâu - gót chân hay lòng bàn chân? Phần trên cơ thể có bị gồng không? Đây là bài tập quan sát thuần túy, không phải điều chỉnh. Tiếp theo là tư thế ngồi xổm: từ tư thế đứng với đùi kẹp lại, học viên được yêu cầu ngồi xuống như ngồi trên ghế cao, chỉ xuống khoảng 5 phân, giữ cho đùi không hở ra. Nhiều học viên gặp khó khăn với động tác này.',
+          'Sau đó là ngồi xổm hoàn toàn: hai bàn chân cách nhau một lóng tay, mông chạm đất, hai tay vươn lên cao. Đây là tư thế mà nhiều người, kể cả người trẻ như Linh Khanh Ngo (19 tuổi), không thể thực hiện được. Khi cố gắng ngồi xuống, cơ thể có xu hướng té ra sau hoặc ra trước.',
+'Cuối cùng là bài tập đứng lên từ tư thế ngồi xổm mà không dùng tay, chỉ dùng chân. MỸ NHƯ yêu cầu học viên quan sát bộ phận nào trên cơ thể nhảy vào hỗ trợ, trong khi lý tưởng là chỉ nên dùng đôi chân.',
+'Qua các bài tập này, học viên bắt đầu nhận ra những thói quen sai lầm và hạn chế của cơ thể mình.',
         ]
       }
     ]
