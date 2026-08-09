@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iCSboDy — Learning Summary</title>
+<title>iHT — Learning Summary</title>
 <style>
 :root{
   --green:#177022; --yellow:#FFCA36; --ink:#171717; --muted:#697069;
@@ -30,7 +30,7 @@ grid-template-columns:180px 1fr;gap:32px;margin-bottom:46px}.number{font-size:13
 .lead{font-size:18px;color:#424842;max-width:780px;margin:20px 0 0}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.item{background:var(--white);
 border:1px solid var(--line);padding:28px}.card{min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
-.card-num{font-size:12px;color:var(--green);font-weight:850;letter-spacing:.1em}
+.card-num{font-size:20px;color:var(--green);font-weight:850;letter-spacing:.1em}
 .card h3{font-size:27px;line-height:1.05;letter-spacing:-.025em;margin:55px 0 12px}.card p{color:#5c625d;margin:0}
 .quote{background:var(--green);color:white;padding:56px clamp(28px,6vw,80px);position:relative;overflow:hidden}
 .quote:after{content:"“";position:absolute;right:24px;top:-50px;font-size:220px;line-height:1;color:rgba(255,255,255,.08)}
@@ -70,14 +70,17 @@ const lessons = [
 /* ======================= BUỔI 01 ======================= */
 {
   id: 1,
-  cohort: "HỆ TRỤC · K13",
-  date: "Buổi 01 · 11 buổi học",
-  title: "Cơ thể bắt đầu từ đâu?",
-  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học — không phải để học lại từ đầu, mà để nhớ điều cơ thể đã từng nhận ra.",
+  cohort: "Thực nghiệm nơi cơ thể",
+  date: "Buổi 01/05",
+  title: "từ TẬP đến DÙNG",
+  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học - không phải để học lại từ đầu, mà để nhớ điều cơ thể đã nhận ra.",
 
   today: {
     title: "Điều buổi học đã chạm tới",
-    text: "Khi bắt đầu quan sát cơ thể, điều quan trọng không nằm ở việc cố sửa một tư thế. Trước hết là nhận ra cơ thể đang ở đâu, đang làm gì và đang nói điều gì qua cảm giác."
+    text: "Giới thiệu một khái niệm cốt lõi: việc "tập" không chỉ diễn ra khi chúng ta vào phòng gym, lớp yoga hay phòng zoom. Thực tế, chúng ta đang "dùng" cơ thể 24/7 - khi ngủ, khi ngồi, khi đi, khi làm việc. Mỗi hành động sử dụng cơ thể đều là một hình thức "tập".
+Vấn đề là nhiều người tách biệt "tập" và "dùng". Họ nghĩ rằng chỉ khi thay đồ tập, vào phòng gym, lớp yoga mới gọi là tập. Nhưng thực tế, cách chúng ta ngồi làm việc, cách cầm bút viết, cách cầm dao nấu ăn - tất cả đều ảnh hưởng đến cơ thể. Nếu trong sinh hoạt hàng ngày chúng ta dùng sai, thì dù có tập bao nhiêu cũng không thể khắc phục được.
+Lấy ví dụ về việc cầm bút: Khi viết, chúng ta chỉ cần ba ngón tay. Nhưng nhiều người lại căng cả cổ tay, vai, cổ khi viết. Thậm chí miệng mồm còn méo theo chữ viết. Đó là dấu hiệu của việc chưa sử dụng chi tiết - thay vì chỉ dùng đúng bộ phận cần thiết, chúng ta lãng phí năng lượng cho toàn bộ cơ thể. Đó chính là nguyên nhân gây đau cổ vai gáy.
+Khái niệm này thách thức cách nhìn truyền thống về tập luyện và đưa ra một cách tiếp cận toàn diện hơn: chăm sóc cơ thể là một quá trình liên tục trong mọi hoạt động, không phải chỉ trong giờ tập."
   },
 
   keyPoints: [
@@ -103,8 +106,8 @@ const lessons = [
 
   practice: {
     title: "Một việc rất nhỏ",
-    text: "Trong một khoảnh khắc bất kỳ ngày hôm nay — lúc đứng lên, ngồi xuống, pha trà hoặc mở cửa — hãy dừng lại vài giây. Không cần chỉnh tư thế. Chỉ thử nhận biết cơ thể đang đặt mình ở đâu.",
-    highlight: "Ngay lúc này, cơ thể đang tự làm điều gì để giữ mình?"
+    text: "Trong một khoảnh khắc bất kỳ ngày hôm nay - lúc đứng lên, ngồi xuống, pha trà hoặc mở cửa - hãy dừng lại vài giây. Không cần chỉnh tư thế. Chỉ thử nhận biết cơ thể đang đặt mình "ở đâu".",
+    highlight: "Ngay lúc này, cơ thể đang tự làm điều gì để giữ trục?"
   }
 },
 
@@ -114,10 +117,10 @@ const lessons = [
 ============================================================== */
 {
   id: 2,
-  cohort: "HỆ TRỤC · K13",
-  date: "Buổi 02 · 11 buổi học",
-  title: "Tên buổi học tiếp theo",
-  intro: "Đoạn mở đầu ngắn 2–3 câu giúp học viên nhớ lại tinh thần của buổi học.",
+  cohort: "Thực nghiệm nơi cơ thể",
+  date: "Buổi 02/05",
+  title: "từ TẬP đến DÙNG",
+  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học - không phải để học lại từ đầu, mà để nhớ điều cơ thể đã nhận ra.",
 
   today: {
     title: "Điều buổi học đã chạm tới",
@@ -164,7 +167,7 @@ let index = lessons.findIndex(x => x.id === currentId);
 if(index < 0) index = 0;
 
 const lesson = lessons[index];
-document.title = `iCSboDy — Buổi ${String(lesson.id).padStart(2,"0")} | ${lesson.title}`;
+document.title = `iHT5day — Buổi ${String(lesson.id).padStart(2,"0")} | ${lesson.title}`;
 document.getElementById("navMeta").textContent = lesson.cohort;
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
@@ -249,7 +252,7 @@ document.getElementById("app").innerHTML = `
 </div>
 
 <footer>
-  <span>iCSboDy · Huấn luyện cơ thể và dinh dưỡng cân bằng</span>
+  <span>iHT · Thực nghiệm nơi cơ thể - Coach Thành Như - 0931 86 3539 (Phone/Zalo)</span>
   <span>Learning Summary</span>
 </footer>
 `;
