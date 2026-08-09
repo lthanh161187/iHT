@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>iHT - Learning Summary</title>
+<title>iHT — Learning Summary</title>
 <style>
 :root{
   --green:#177022; --yellow:#FFCA36; --ink:#171717; --muted:#697069;
@@ -77,7 +77,7 @@ const lessons = [
 
   today: {
     title: "Điều buổi học đã chạm tới",
-    text: "chăm sóc cơ thể là một quá trình liên tục trong mọi hoạt động, không phải chỉ trong giờ tập."
+    text: "Khi bắt đầu quan sát cơ thể, điều quan trọng không nằm ở việc cố sửa một tư thế. Trước hết là nhận ra cơ thể đang ở đâu, đang làm gì và đang nói điều gì qua cảm giác."
   },
 
   keyPoints: [
@@ -103,8 +103,8 @@ const lessons = [
 
   practice: {
     title: "Một việc rất nhỏ",
-    text: "Trong một khoảnh khắc bất kỳ ngày hôm nay - lúc đứng lên, ngồi xuống, pha trà hoặc mở cửa - hãy dừng lại vài giây. Không cần chỉnh tư thế. Chỉ thử nhận biết cơ thể đang đặt mình "ở đâu".",
-    highlight: "Ngay lúc này, cơ thể đang tự làm điều gì để giữ trục?"
+    text: "Trong một khoảnh khắc bất kỳ ngày hôm nay — lúc đứng lên, ngồi xuống, pha trà hoặc mở cửa — hãy dừng lại vài giây. Không cần chỉnh tư thế. Chỉ thử nhận biết cơ thể đang đặt mình ở đâu.",
+    highlight: "Ngay lúc này, cơ thể đang tự làm điều gì để giữ mình?"
   }
 },
 
@@ -114,10 +114,10 @@ const lessons = [
 ============================================================== */
 {
   id: 2,
-  cohort: "Thực nghiệm nơi cơ thể",
-  date: "Buổi 02/05",
-  title: "từ TẬP đến DÙNG",
-  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học - không phải để học lại từ đầu, mà để nhớ điều cơ thể đã nhận ra.",
+  cohort: "HỆ TRỤC · K13",
+  date: "Buổi 02 · 11 buổi học",
+  title: "Tên buổi học tiếp theo",
+  intro: "Đoạn mở đầu ngắn 2–3 câu giúp học viên nhớ lại tinh thần của buổi học.",
 
   today: {
     title: "Điều buổi học đã chạm tới",
@@ -164,7 +164,7 @@ let index = lessons.findIndex(x => x.id === currentId);
 if(index < 0) index = 0;
 
 const lesson = lessons[index];
-document.title = `iHT5day — Buổi ${String(lesson.id).padStart(2,"0")} | ${lesson.title}`;
+document.title = `iCSboDy — Buổi ${String(lesson.id).padStart(2,"0")} | ${lesson.title}`;
 document.getElementById("navMeta").textContent = lesson.cohort;
 
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
@@ -249,7 +249,7 @@ document.getElementById("app").innerHTML = `
 </div>
 
 <footer>
-  <span>iHT · Thực nghiệm nơi cơ thể - Coach Thành Như - 0931 86 3539 (Phone/Zalo)</span>
+  <span>iCSboDy · Huấn luyện cơ thể và dinh dưỡng cân bằng</span>
   <span>Learning Summary</span>
 </footer>
 `;
