@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iCSboDy — Learning Summary</title>
+<style>
+:root{
+  --green:#177022; --yellow:#FFCA36; --ink:#171717; --muted:#697069;
+  --paper:#f7f7f2; --white:#fff; --line:#dfe3dc; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+a{text-decoration:none;color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+header{position:sticky;top:0;z-index:10;background:rgba(247,247,242,.94);
+backdrop-filter:blur(12px);border-bottom:1px solid rgba(223,227,220,.8)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;font-size:14px}
+.brand{font-weight:850;letter-spacing:.04em;color:var(--green)}.meta{color:var(--muted)}
+.hero{padding:82px 0 100px}.eyebrow{display:flex;align-items:center;gap:10px;color:var(--green);
+font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--yellow)}
+h1{max-width:920px;margin:0;font-size:clamp(50px,8vw,104px);line-height:.92;letter-spacing:-.065em}
+.hero-bottom{margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end}
+.intro{font-size:20px;max-width:640px}.date{text-align:right;color:var(--muted);font-size:14px}
+section{border-top:1px solid var(--line);padding:72px 0}.section-head{display:grid;
+grid-template-columns:180px 1fr;gap:32px;margin-bottom:46px}.number{font-size:13px;color:var(--green);font-weight:850;letter-spacing:.08em}
+.section-title{margin:0;font-size:clamp(31px,4vw,54px);line-height:1;letter-spacing:-.045em}
+.lead{font-size:18px;color:#424842;max-width:780px;margin:20px 0 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.item{background:var(--white);
+border:1px solid var(--line);padding:28px}.card{min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
+.card-num{font-size:12px;color:var(--green);font-weight:850;letter-spacing:.1em}
+.card h3{font-size:27px;line-height:1.05;letter-spacing:-.025em;margin:55px 0 12px}.card p{color:#5c625d;margin:0}
+.quote{background:var(--green);color:white;padding:56px clamp(28px,6vw,80px);position:relative;overflow:hidden}
+.quote:after{content:"“";position:absolute;right:24px;top:-50px;font-size:220px;line-height:1;color:rgba(255,255,255,.08)}
+.quote p{position:relative;z-index:1;max-width:880px;margin:0;font-size:clamp(32px,5vw,66px);line-height:1.02;letter-spacing:-.045em}
+.experience{display:grid;grid-template-columns:1fr 1fr;gap:16px}.item strong{display:block;font-size:20px;margin-bottom:8px}
+.questions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.question{border:1px solid var(--green);
+padding:28px;min-height:190px}.question span{color:var(--green);font-weight:850;font-size:13px}
+.question p{font-size:22px;line-height:1.15;margin-top:42px;letter-spacing:-.02em}
+.practice{display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center}
+.practice-box{background:var(--yellow);padding:38px;font-size:25px;line-height:1.2;letter-spacing:-.025em}
+.pager{display:flex;justify-content:space-between;align-items:center;padding:38px 0 70px;border-top:1px solid var(--line)}
+.pager a{font-weight:850;color:var(--green)}.pager a.disabled{opacity:.25;pointer-events:none}
+footer{border-top:1px solid var(--line);padding:30px 0 45px;color:var(--muted);font-size:13px}
+@media(max-width:760px){
+.wrap{padding:0 20px}.hero{padding:60px 0 70px}.hero-bottom,.section-head,.practice{grid-template-columns:1fr}
+.date{text-align:left}.cards,.questions,.experience{grid-template-columns:1fr}section{padding:54px 0}
+.section-head{gap:12px;margin-bottom:32px}.card{min-height:210px}.card h3{margin-top:35px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <div class="brand">iCSboDy</div><div class="meta" id="navMeta"></div>
+</div></header>
+
+<main><div class="wrap" id="app"></div></main>
+
+<script>
+/* ==========================================================
+   iCSboDy LEARNING SUMMARY
+   ANH CHỈ CẦN CHỈNH NỘI DUNG TRONG lessons[] BÊN DƯỚI.
+   Không cần sửa phần HTML/CSS phía sau.
+   ========================================================== */
+
+const lessons = [
+
+/* ======================= BUỔI 01 ======================= */
+{
+  id: 1,
+  cohort: "HỆ TRỤC · K13",
+  date: "Buổi 01 · 11 buổi học",
+  title: "Cơ thể bắt đầu từ đâu?",
+  intro: "Một trang để nhìn lại những điều đã đi qua trong buổi học — không phải để học lại từ đầu, mà để nhớ điều cơ thể đã từng nhận ra.",
+
+  today: {
+    title: "Điều buổi học đã chạm tới",
+    text: "Khi bắt đầu quan sát cơ thể, điều quan trọng không nằm ở việc cố sửa một tư thế. Trước hết là nhận ra cơ thể đang ở đâu, đang làm gì và đang nói điều gì qua cảm giác."
+  },
+
+  keyPoints: [
+    { title: "Tư thế không chỉ là hình dáng", text: "Một tư thế nhìn có vẻ thẳng chưa chắc đã là một tư thế cơ thể đang thấy dễ chịu." },
+    { title: "Cảm nhận trước khi điều chỉnh", text: "Trước khi sửa một điểm trên cơ thể, thử nhận biết nó đang căng, mềm, nặng, nhẹ hay đang tìm cách bù trừ." },
+    { title: "Cơ thể có nhiều đường liên kết", text: "Một cảm giác khó chịu ở một vùng không nhất thiết bắt đầu từ chính vùng đó." }
+  ],
+
+  takeaway: "Có những điều cơ thể đã biết, chỉ là mình chưa đủ chậm để nhận ra.",
+
+  experience: [
+    { title: "Quan sát tư thế hiện tại", text: "Nhận biết cách cơ thể đang đứng, phân bố trọng lượng và tìm điểm tựa." },
+    { title: "Chậm lại trong chuyển động", text: "Giảm tốc độ để thấy những thay đổi nhỏ mà khi chuyển động nhanh thường bị bỏ qua." },
+    { title: "Nhận biết từng cấu trúc", text: "Mỗi vùng cơ thể có thể đem lại một kiểu cảm nhận khác nhau." },
+    { title: "Không vội sửa", text: "Quan sát trước. Điều chỉnh chỉ xuất hiện khi cơ thể đã có đủ thông tin." }
+  ],
+
+  questions: [
+    "Hôm nay tôi nhận ra điều gì mà trước đây mình thường bỏ qua?",
+    "Khi chậm lại, cảm giác nào trong cơ thể trở nên rõ hơn?",
+    "Nếu không cố sửa, cơ thể đang tự tìm cách cân bằng như thế nào?"
+  ],
+
+  practice: {
+    title: "Một việc rất nhỏ",
+    text: "Trong một khoảnh khắc bất kỳ ngày hôm nay — lúc đứng lên, ngồi xuống, pha trà hoặc mở cửa — hãy dừng lại vài giây. Không cần chỉnh tư thế. Chỉ thử nhận biết cơ thể đang đặt mình ở đâu.",
+    highlight: "Ngay lúc này, cơ thể đang tự làm điều gì để giữ mình?"
+  }
+},
+
+/* ======================= MẪU BUỔI 02 =======================
+   Copy object này để tạo Buổi 03, 04...
+   Sau này anh chỉ cần thay nội dung.
+============================================================== */
+{
+  id: 2,
+  cohort: "HỆ TRỤC · K13",
+  date: "Buổi 02 · 11 buổi học",
+  title: "Tên buổi học tiếp theo",
+  intro: "Đoạn mở đầu ngắn 2–3 câu giúp học viên nhớ lại tinh thần của buổi học.",
+
+  today: {
+    title: "Điều buổi học đã chạm tới",
+    text: "Tóm tắt 2–4 câu về điều quan trọng nhất đã được trải nghiệm trong buổi học."
+  },
+
+  keyPoints: [
+    { title: "Ý chính số một", text: "Giải thích ngắn gọn điều học viên cần nhớ." },
+    { title: "Ý chính số hai", text: "Một ý quan trọng khác, viết đủ để hiểu nhưng không dài." },
+    { title: "Ý chính số ba", text: "Điểm thứ ba cần mang theo sau buổi học." }
+  ],
+
+  takeaway: "Một câu ngắn có thể trở thành điểm neo để học viên nhớ lại cả buổi học.",
+
+  experience: [
+    { title: "Trải nghiệm 01", text: "Mô tả ngắn." },
+    { title: "Trải nghiệm 02", text: "Mô tả ngắn." },
+    { title: "Trải nghiệm 03", text: "Mô tả ngắn." },
+    { title: "Trải nghiệm 04", text: "Mô tả ngắn." }
+  ],
+
+  questions: [
+    "Câu hỏi tự quan sát số một?",
+    "Câu hỏi tự quan sát số hai?",
+    "Câu hỏi tự quan sát số ba?"
+  ],
+
+  practice: {
+    title: "Một việc rất nhỏ",
+    text: "Gợi ý một thực hành đơn giản có thể mang vào đời sống.",
+    highlight: "Một câu hỏi để học viên tự quan sát."
+  }
+}
+
+];
+
+/* ==========================================================
+   KHÔNG CẦN CHỈNH PHẦN BÊN DƯỚI
+   ========================================================== */
+
+const params = new URLSearchParams(location.search);
+let currentId = Number(params.get("buoi") || 1);
+let index = lessons.findIndex(x => x.id === currentId);
+if(index < 0) index = 0;
+
+const lesson = lessons[index];
+document.title = `iCSboDy — Buổi ${String(lesson.id).padStart(2,"0")} | ${lesson.title}`;
+document.getElementById("navMeta").textContent = lesson.cohort;
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+}[c]));
+
+const pad = n => String(n).padStart(2,"0");
+
+document.getElementById("app").innerHTML = `
+<section class="hero" style="border-top:0">
+  <div class="eyebrow"><span class="dot"></span> Learning Summary · Buổi ${pad(lesson.id)}</div>
+  <h1>${esc(lesson.title)}</h1>
+  <div class="hero-bottom">
+    <div class="intro">${esc(lesson.intro)}</div>
+    <div class="date">${esc(lesson.cohort)}<br>${esc(lesson.date)}</div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="number">01 — HÔM NAY</div>
+    <div><h2 class="section-title">${esc(lesson.today.title)}</h2>
+    <p class="lead">${esc(lesson.today.text)}</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="number">02 — CỐT LÕI</div>
+    <div><h2 class="section-title">3 điều cần mang theo</h2>
+    <p class="lead">Không cần nhớ thật nhiều. Chỉ cần giữ lại vài điểm đủ để lần sau khi đứng, ngồi hay chuyển động, anh có thể bắt đầu quan sát.</p></div>
+  </div>
+  <div class="cards">
+    ${lesson.keyPoints.map((x,i)=>`
+      <article class="card"><div class="card-num">${pad(i+1)}</div>
+      <div><h3>${esc(x.title)}</h3><p>${esc(x.text)}</p></div></article>
+    `).join("")}
+  </div>
+</section>
+
+<section style="border-top:0;padding-top:0">
+  <div class="quote"><p>“${esc(lesson.takeaway)}”</p></div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="number">03 — TRẢI NGHIỆM</div>
+    <div><h2 class="section-title">Trong buổi học đã quan sát gì?</h2>
+    <p class="lead">Các bài tập không nhằm tạo ra một tư thế đẹp để nhìn, mà mở ra cơ hội nhận biết sự khác nhau giữa làm và cảm.</p></div>
+  </div>
+  <div class="experience">
+    ${lesson.experience.map(x=>`<div class="item"><strong>${esc(x.title)}</strong><span>${esc(x.text)}</span></div>`).join("")}
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="number">04 — NHÌN LẠI</div>
+    <div><h2 class="section-title">Ba câu hỏi cho chính mình</h2>
+    <p class="lead">Không cần trả lời đúng. Chỉ cần dành một chút thời gian để nhận ra điều gì đang xảy ra bên trong cơ thể.</p></div>
+  </div>
+  <div class="questions">
+    ${lesson.questions.map((x,i)=>`<div class="question"><span>${pad(i+1)}</span><p>${esc(x)}</p></div>`).join("")}
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="number">05 — MANG VỀ</div>
+    <div><h2 class="section-title">${esc(lesson.practice.title)}</h2></div>
+  </div>
+  <div class="practice">
+    <p class="lead">${esc(lesson.practice.text)}</p>
+    <div class="practice-box">Thử hỏi:<br><br><strong>“${esc(lesson.practice.highlight)}”</strong></div>
+  </div>
+</section>
+
+<div class="pager">
+  <a class="${index===0?'disabled':''}" href="?buoi=${index}">← Buổi trước</a>
+  <span>Buổi ${pad(lesson.id)} · ${esc(lesson.cohort)}</span>
+  <a class="${index===lessons.length-1?'disabled':''}" href="?buoi=${index+2}">Buổi tiếp theo →</a>
+</div>
+
+<footer>
+  <span>iCSboDy · Huấn luyện cơ thể và dinh dưỡng cân bằng</span>
+  <span>Learning Summary</span>
+</footer>
+`;
+</script>
+</body>
+</html>
